@@ -1,0 +1,39 @@
+POST http://localhost:8000/api/v1/register
+content-type: application/json
+
+{
+    "name": "random2",
+    "email": "random6@gmail.com",
+    "password": "random"
+}
+
+###
+
+POST http://localhost:8000/api/v1/product
+content-type: application/json
+
+{
+    "name": "realme 9 (Sunburst Gold, 128 GB)  (6 GB RAM)",
+    "type": "MOBILE",
+    "features": [
+      "6 GB RAM | 128 GB ROM | Expandable Upto 256 GB",
+      "16.26 cm (6.4 inch) Full HD+ AMOLED Display",
+      "108MP + 8MP + 2MP | 16MP Front Camera",
+      "5000 mAh Lithium Ion Battery"
+    ],
+    "description":
+      "Binge-watch your favourite shows, play games and do more with the realme 9 smartphone. This mobile phone is equipped with a massive 5000 mAh battery that allows you to indulge in entertainment throughout the day. Also, this mobile phone has a powerful Snapdragon 680 Processor to offer smooth and easy multitasking performance. Moreover, thanks to the realme UI 3.0, you can enjoy easy upgrades and optimised features on this phone.",
+    "price": 16999,
+    "image":
+      "https://rukminim1.flixcart.com/image/416/416/l3t2fm80/mobile/6/w/7/-original-imageu8cuhfumfw7.jpeg?q=70"
+}
+
+###
+
+POST http://localhost:8000/api/v1/user/login
+content-type: application/json
+
+{
+    "email": "random3@gmail.com",
+    "password": "random"
+}
