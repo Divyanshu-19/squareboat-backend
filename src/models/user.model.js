@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const OrderSchema = new mongoose.Schema({
   order: {
     type: mongoose.SchemaTypes.ObjectId,
+    ref: "Product",
     required: true,
   },
   orderId: {

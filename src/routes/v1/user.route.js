@@ -15,6 +15,6 @@ router.post("/user/register", createUser);
 router.post("/user/login", loginUser);
 router.get("/user/data", verifyAuth, getUserData);
 router.post("/user/buy", verifyAuth, buyProduct);
-router.post("/user/orders", verifyAuth, orderHistory);
+router.get("/user/orders", verifyAuth, orderHistory);
 
 module.exports = router;

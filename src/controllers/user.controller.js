@@ -1,4 +1,5 @@
 const User = require("../models/user.model");
+const Product = require("../models/product.model");
 const bcrypt = require("bcrypt");
 const { issueToken } = require("../config/auth");
 
@@ -69,8 +70,18 @@ const loginUser = async (req, res) => {
   });
 };
 
-const orderHistory = (req, res) => {
-  res.json({ status: "OK" });
+const orderHistory = async (req, res) => {
+  try {
+    console.log("here");
+    const user = await User.findOne({ email: req.email }).populate(
+      "orders.order"
+    );
+    console.log(user);
+
+    res.status(200).json({ status: "OK", result: user.orders });
+  } catch (err) {
+    res.status(400);
+  }
 };
 
 const buyProduct = async (req, res) => {
